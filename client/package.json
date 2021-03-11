@@ -9,6 +9,7 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "dependencies": {
+    "@babel/core": "^7.13.10",
     "@ethersproject/providers": "^5.0.24",
     "@ethersproject/units": "^5.0.11",
     "@types/styled-components": "^5.1.7",
