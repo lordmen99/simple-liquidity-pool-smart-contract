@@ -20,7 +20,7 @@ contract('liquidityPool', accounts => {
     );
 
     // Transfer governance token ownership to liquidity pool smart contract address.
-    // Check what happens if you comment below code.
+    // Check what happens if you comment out below code.
     await governanceToken.transferOwnership(liquidityPool.address);
 
     // Give some tokens to both traders
