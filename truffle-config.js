@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -42,10 +44,10 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    development: {
+    develop: {
      host: "127.0.0.1",     // Localhost (default: none)
-     port: 9545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+     port: 8545,            // Standard Ethereum port (default: none)
+     network_id: 1337,       // Any network (default: none)
     },
     // Another network with more advanced options...
     // advanced: {
@@ -99,7 +101,7 @@ module.exports = {
   // Note: if you migrated your contracts prior to enabling this field in your Truffle project and want
   // those previously migrated contracts available in the .db directory, you will need to run the following:
   // $ truffle migrate --reset --compile-all
-
+  contracts_build_directory: path.join(__dirname, "client/contracts"),
   db: {
     enabled: false
   }
