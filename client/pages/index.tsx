@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useWeb3React } from "@web3-react/core";
 
 import {
@@ -8,8 +8,6 @@ import {
   Container,
   Label,
   TextButton,
-  Box,
-  Button,
   Faucet,
 } from "../components";
 
@@ -17,8 +15,6 @@ import { getErrorMessage } from "../utils";
 
 export default function Home() {
   const { deactivate, active, error } = useWeb3React<any>();
-
-  const [showFaucet, setShowFaucet] = useState(false);
 
   return (
     <Container>
