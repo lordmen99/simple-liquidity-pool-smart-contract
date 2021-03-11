@@ -35,12 +35,6 @@ export const AddLiquidity = () => {
 
   const [isApproved, setIsApproved] = useState(false);
 
-  //   await underlyingToken.approve(
-  //   liquidityPool.address,
-  //   web3.utils.toWei('100'),
-  //   {from: trader1}
-  // );
-
   const addLiquidity = () => {
     if (!isApproved) {
       approveLiquidity();
@@ -88,7 +82,7 @@ export const AddLiquidity = () => {
         deployedNetwork && deployedNetwork.address
       );
       await lpTokenContractInstance.methods
-        .approve(
+        .deposit(
           "0x230f4021E5D55ceE65af12d2FCd8df7DC6F85759",
           library.utils.toWei(amount)
         )
